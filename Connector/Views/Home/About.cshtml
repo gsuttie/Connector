@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "About C@nnector";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+
+            <p>
+                <b>C@nnector</b> is a website which I will be working on with hopefully a few people which will start out small and hopefully grow into 
+        something bigger. 
+            </p>
+            <p>
+                To get the ball rolling I intend to use the project as a way of learning technologies I am familiar with but havent 
+        had much time hands on with. the code will be on GitHub for anyone to use and play around with - if youd like to know more
+        then please check out the @Html.ActionLink("Contact", "Contact", "Home") page.
+            </p>
+            <p>
+                The goal of the project is to share information for developer resources, say you want to learn a new technology then the website will
+        show information about a certain technology and point you in the direction of some hopefully good resources ranging from blogs to
+        actual people on twitter who are a wealth of knowledge on a given topic.
+            </p>
+        </div>
+    </section>
+}

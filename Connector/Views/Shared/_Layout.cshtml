@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title - C@nnector</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        
+        <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/themes/ui-lightness/jquery-ui-1.8.16.custom.css")" rel="stylesheet" type="text/css" />
+        @Scripts.Render("~/bundles/modernizr")
+
+        <script src="@Url.Content("~/Scripts/jquery-1.8.0.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>
+
+        <script src="@Url.Content("~/Scripts/jquery.notifyBar.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/jquery-ui-1.8.23.js")" type="text/javascript"></script>
+
+        <script src="@Url.Content("~/Scripts/knockout-2.1.0.debug.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/ko-protected-observable.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/ajax-util.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/Scripts/ko-execute-on-enter.js")" type="text/javascript"></script>
+    </head>
+
+    <body>
+    <header>
+        <div class="shell">
+		    <div id="top">
+			    <h1><a href="#">C@nnector</a></h1>
+			    <div id="top-navigation">
+				    Welcome <a href="#"><strong>Administrator</strong></a>
+				    <span>|</span>
+				    <a href="#">Log out</a>
+			    </div>
+		    </div>
+		
+            <nav>
+			    <ul>
+			        @*<li><a href="#" class="active"><span>Drills</span></a></li>
+			        <li><a href="#"><span>Practices</span></a></li>*@
+                    <li class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Tags", "Index", "Tags")</li>
+                    <li>@Html.ActionLink("Ideas", "Index", "Ideas")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+			    </ul>
+            </nav>
+	    </div>
+    </header>
+
+    <div id="container">
+		<div id="main">
+            @RenderSection("featured", required: false)
+            @RenderBody()
+		</div>
+    </div>
+
+    <footer>
+	    <div class="shell">
+		    <span class="right">
+			    Design by <a href="http://chocotemplates.com" target="_blank" title="The Sweetest CSS Templates WorldWide">Chocotemplates.com</a>
+		    </span>
+	    </div>
+    </footer>	
+</body>
+</html>
